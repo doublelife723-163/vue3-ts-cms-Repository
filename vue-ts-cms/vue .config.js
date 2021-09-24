@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports = {
   outputDir: './build',
+  pubulicPath: './',
   configureWebpack: {
     resolve: {
       alias: {
