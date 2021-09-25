@@ -18,20 +18,17 @@
 // 生产环境：production
 // 测试环境：test
 let BASE_URL = ''
-let BASE_NAME = ''
+const TIME_OUT = 10000
 
 if (process.env.NODE_ENV === 'development') {
-  BASE_URL = 'http://charles.org/dev'
-  BASE_NAME = 'charles'
+  BASE_URL = 'http://152.136.185.210:5000'
 } else if (process.env.NODE_ENV === 'production') {
-  BASE_URL = 'http://coderwhy.org/dev'
-  BASE_NAME = 'coderwhy'
+  BASE_URL = 'http://152.136.185.210:5000'
 } else if (process.env.NODE_ENV === 'test') {
-  BASE_URL = 'http://markerel.org/dev'
-  BASE_NAME = 'markerel'
+  BASE_URL = 'http://152.136.185.210:5000'
 }
 
 // es6：如果先定义，再赋值，最后导出的时候需要用{}包装一下
-export { BASE_URL, BASE_NAME }
+export { BASE_URL, TIME_OUT }
 
 // 3.通过.env.development, .env.production, .env.test三个单独的配置文件进行配置
